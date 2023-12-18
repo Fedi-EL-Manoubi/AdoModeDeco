@@ -1,3 +1,4 @@
+using AdoTpDeco;
 using MySql.Data.MySqlClient;
 
 namespace AdoTpFedi
@@ -16,19 +17,8 @@ namespace AdoTpFedi
         {
             try
             {
-                dgv_ListeAuteur.Rows.Clear();
-  
-                while (monReader.Read())
-                {
-                    dgv_ListeAuteur.Rows.Add(
-                        monReader["num"].ToString(),
-                        monReader["nom"].ToString(),
-                        monReader["prenom"].ToString(),
-                        monReader["nationalite"].ToString()
-                        );
+                LesAuteurs = ManagerAuteur.DonneAuteurs();
 
-
-                }
             }
             catch (Exception ex)
             {
@@ -37,8 +27,7 @@ namespace AdoTpFedi
             }
             finally
             {
-                monReader.Close();
-                Connection.MaConnection.Close();
+
             }
         }
 
@@ -55,7 +44,9 @@ namespace AdoTpFedi
             Form_FicheAuteur frm = new Form_FicheAuteur(true, element);
             frm.Show();
             RemplirListe();
-            dgv_ListeAuteur.Refresh(); 
+            dgv_ListeAuteur.Refresh();
         }
+
+
     }
 } 

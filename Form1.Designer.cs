@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             dgv_ListeAuteur = new DataGridView();
             Num = new DataGridViewTextBoxColumn();
             Nom = new DataGridViewTextBoxColumn();
@@ -37,7 +38,13 @@
             btn_Modifier = new Button();
             btn_Supp = new Button();
             btn_nouveau = new Button();
+            bs = new BindingSource(components);
+            bindingSource1 = new BindingSource(components);
+            bindingSource2 = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dgv_ListeAuteur).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bs).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource2).BeginInit();
             SuspendLayout();
             // 
             // dgv_ListeAuteur
@@ -52,7 +59,7 @@
             dgv_ListeAuteur.ReadOnly = true;
             dgv_ListeAuteur.RowTemplate.Height = 25;
             dgv_ListeAuteur.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_ListeAuteur.Size = new Size(669, 438);
+            dgv_ListeAuteur.Size = new Size(545, 438);
             dgv_ListeAuteur.TabIndex = 0;
             // 
             // Num
@@ -82,7 +89,7 @@
             // 
             // btn_Afficher
             // 
-            btn_Afficher.Location = new Point(727, 31);
+            btn_Afficher.Location = new Point(607, 31);
             btn_Afficher.Name = "btn_Afficher";
             btn_Afficher.Size = new Size(75, 23);
             btn_Afficher.TabIndex = 1;
@@ -92,7 +99,7 @@
             // 
             // btn_Modifier
             // 
-            btn_Modifier.Location = new Point(727, 60);
+            btn_Modifier.Location = new Point(607, 60);
             btn_Modifier.Name = "btn_Modifier";
             btn_Modifier.Size = new Size(75, 23);
             btn_Modifier.TabIndex = 2;
@@ -102,7 +109,7 @@
             // 
             // btn_Supp
             // 
-            btn_Supp.Location = new Point(727, 89);
+            btn_Supp.Location = new Point(607, 89);
             btn_Supp.Name = "btn_Supp";
             btn_Supp.Size = new Size(75, 23);
             btn_Supp.TabIndex = 3;
@@ -111,7 +118,7 @@
             // 
             // btn_nouveau
             // 
-            btn_nouveau.Location = new Point(727, 118);
+            btn_nouveau.Location = new Point(607, 118);
             btn_nouveau.Name = "btn_nouveau";
             btn_nouveau.Size = new Size(75, 23);
             btn_nouveau.TabIndex = 4;
@@ -122,7 +129,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(836, 471);
+            ClientSize = new Size(724, 471);
             Controls.Add(btn_nouveau);
             Controls.Add(btn_Supp);
             Controls.Add(btn_Modifier);
@@ -131,6 +138,9 @@
             Name = "Form_ListeAuteur";
             Text = "Liste des auteurs";
             ((System.ComponentModel.ISupportInitialize)dgv_ListeAuteur).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bs).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource2).EndInit();
             ResumeLayout(false);
         }
 
@@ -145,5 +155,8 @@
         private Button btn_Modifier;
         private Button btn_Supp;
         private Button btn_nouveau;
+        private BindingSource bs;
+        private BindingSource bindingSource1;
+        private BindingSource bindingSource2;
     }
 }
