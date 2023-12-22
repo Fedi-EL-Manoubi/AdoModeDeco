@@ -39,12 +39,8 @@
             btn_Supp = new Button();
             btn_nouveau = new Button();
             bs = new BindingSource(components);
-            bindingSource1 = new BindingSource(components);
-            bindingSource2 = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dgv_ListeAuteur).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bs).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)bindingSource2).BeginInit();
             SuspendLayout();
             // 
             // dgv_ListeAuteur
@@ -61,6 +57,7 @@
             dgv_ListeAuteur.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv_ListeAuteur.Size = new Size(545, 438);
             dgv_ListeAuteur.TabIndex = 0;
+            dgv_ListeAuteur.CellContentClick += dgv_ListeAuteur_CellContentClick;
             // 
             // Num
             // 
@@ -137,10 +134,9 @@
             Controls.Add(dgv_ListeAuteur);
             Name = "Form_ListeAuteur";
             Text = "Liste des auteurs";
+            Load += Form_ListeAuteur_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_ListeAuteur).EndInit();
             ((System.ComponentModel.ISupportInitialize)bs).EndInit();
-            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)bindingSource2).EndInit();
             ResumeLayout(false);
         }
 
@@ -156,7 +152,5 @@
         private Button btn_Supp;
         private Button btn_nouveau;
         private BindingSource bs;
-        private BindingSource bindingSource1;
-        private BindingSource bindingSource2;
     }
 }

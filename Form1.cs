@@ -47,6 +47,14 @@ namespace AdoTpFedi
             dgv_ListeAuteur.Refresh();
         }
 
+        private void Form_ListeAuteur_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        private void dgv_ListeAuteur_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 } 

@@ -10,9 +10,9 @@ namespace AdoTpDeco
 {
     public class ManagerAuteur
     {
-            public static DonneAuteurDuReader(MySqlDataReader monreader)
+            public static Auteur DonneAuteurDuReader(MySqlDataReader monreader)
             {
-            
+            return null;
             }
             public static List<Auteur> DonneAuteurs()
             {
@@ -37,22 +37,22 @@ namespace AdoTpDeco
             monReader.Close();
             Connection.MaConnection.Close();
             return lesAuteurs;
-        }
+             }
             public static Auteur DonneAuteurParId(int id)
             {
-
+            return null;
             }
             public static bool ModifierAuteur(Auteur a)
             {
-
+            return false;
             }
             public static bool AjouterAuteur(Auteur a)
             {
-
-            }
+            return false;
+             }
             public static bool SupprimerAuteur(Auteur a)
             {
-
+            return false;
             }
     }
 }
