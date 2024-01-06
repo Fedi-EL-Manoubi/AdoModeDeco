@@ -38,9 +38,9 @@
             btn_Modifier = new Button();
             btn_Supp = new Button();
             btn_nouveau = new Button();
-            bs = new BindingSource(components);
+            bindingSource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dgv_ListeAuteur).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)bs).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource).BeginInit();
             SuspendLayout();
             // 
             // dgv_ListeAuteur
@@ -136,7 +136,7 @@
             Text = "Liste des auteurs";
             Load += Form_ListeAuteur_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_ListeAuteur).EndInit();
-            ((System.ComponentModel.ISupportInitialize)bs).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -151,6 +151,6 @@
         private Button btn_Modifier;
         private Button btn_Supp;
         private Button btn_nouveau;
-        private BindingSource bs;
+        private BindingSource bindingSource;
     }
 }

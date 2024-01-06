@@ -1,5 +1,6 @@
 using AdoTpDeco;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace AdoTpFedi
 {
@@ -56,5 +57,14 @@ namespace AdoTpFedi
         {
 
         }
+
+        private void bs_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+        BindingSource bindingSource1 = new BindingSource();
+        
+
+
     }
 } 
